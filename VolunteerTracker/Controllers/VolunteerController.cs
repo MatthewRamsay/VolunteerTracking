@@ -24,6 +24,7 @@ namespace VolunteerTracker.Controllers
     /// 
     /// The "add volunteer" (button/link) will be at the top in the same area as the filters. 
     /// </summary>
+    
     public class VolunteerController : Controller 
     {
         // GET: Volunteer
