@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,7 +10,6 @@ namespace VolunteerTracker.Models.Volunteer
 {
     public class Volunteer
     {
-
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string UserName { get; set; }
@@ -18,8 +18,6 @@ namespace VolunteerTracker.Models.Volunteer
         public IList<Skill> Skills { get; set; }
         public IList<DayAvailable> DaysAvailable { get; set; }
         public VolunteerAddress Address { get; set; }
-
-        // Contact numbers of volunteer (Home/work/cell phone numbers)
         public IList<ContactNumber> ContactNumbers { get; set; }
         public string Email { get; set; }
         public string HighestEducation { get; set; }
@@ -29,6 +27,6 @@ namespace VolunteerTracker.Models.Volunteer
         public bool HasSsCard { get; set; }
 
         // Status of volunteer (Approved, Pending, Dissaproved, Inactive)
-        public IList<String> Status { get; set; }
+        public IList<Status> Statuses { get; set; }
     }
 }

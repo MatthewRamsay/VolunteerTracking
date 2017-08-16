@@ -203,6 +203,7 @@
     <Compile Include="Models\Volunteer\CurrentLicense.cs" />
     <Compile Include="Models\Volunteer\DayAvailable.cs" />
     <Compile Include="Models\Volunteer\EmergencyContact.cs" />
+    <Compile Include="Models\Volunteer\Status.cs" />
     <Compile Include="Models\Volunteer\VolunteerAddress.cs" />
     <Compile Include="Models\Volunteer\Center.cs" />
     <Compile Include="Models\Volunteer\Skill.cs" />
