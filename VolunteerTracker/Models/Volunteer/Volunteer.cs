@@ -17,16 +17,16 @@ namespace VolunteerTracker.Models.Volunteer
         public IList<Center> CentersPreferred { get; set; }
         public IList<Skill> Skills { get; set; }
         public IList<DayAvailable> DaysAvailable { get; set; }
-        public VolunteerAddress Address { get; set; }
+        public Address Address { get; set; }
         public IList<ContactNumber> ContactNumbers { get; set; }
         public string Email { get; set; }
         public string HighestEducation { get; set; }
         public IList<CurrentLicense> Licenses { get; set; }
-        public IList<EmergencyContact> EmergencyContacts { get; set; }
+        public IList<Contact> EmergencyContacts { get; set; }
         public bool HasDriversLicense { get; set; }
         public bool HasSsCard { get; set; }
 
-        // Status of volunteer (Approved, Pending, Dissaproved, Inactive)
+        // Status of volunteer (Approved, Pending, Disapproved, Inactive)
         public IList<Status> Statuses { get; set; }
     }
 }

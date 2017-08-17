@@ -5,7 +5,7 @@ using System.Web;
 
 namespace VolunteerTracker.Models.Volunteer
 {
-    public class VolunteerAddress
+    public class Contact
     {
     }
 }
