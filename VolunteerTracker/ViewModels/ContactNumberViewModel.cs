@@ -8,6 +8,9 @@ namespace VolunteerTracker.ViewModels
 {
     public class ContactNumberViewModel
     {
+        [Key]
+        public int Id { get; set; }
+
         // HOME
         [Display(Name = "Home")]
         [DataType(DataType.PhoneNumber)]

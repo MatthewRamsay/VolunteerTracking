@@ -11,6 +11,7 @@ namespace VolunteerTracker.ViewModels
 {
     public class VolunteerViewModel
     {
+        [Key]
         [HiddenInput(DisplayValue = false)]
         public int Id { get; set; }
 

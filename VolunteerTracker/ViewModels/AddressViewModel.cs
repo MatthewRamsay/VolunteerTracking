@@ -9,6 +9,7 @@ namespace VolunteerTracker.ViewModels
 {
     public class AddressViewModel
     {
+        [Key]
         [HiddenInput(DisplayValue = false)]
         public int Id { get; set; }
 

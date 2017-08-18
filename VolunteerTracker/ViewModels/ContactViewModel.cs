@@ -10,6 +10,7 @@ namespace VolunteerTracker.ViewModels
 {
     public class ContactViewModel
     {
+        [Key]
         [HiddenInput(DisplayValue = false)]
         public int Id { get; set; }
 

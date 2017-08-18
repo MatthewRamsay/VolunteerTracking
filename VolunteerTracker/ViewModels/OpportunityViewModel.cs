@@ -10,6 +10,7 @@ namespace VolunteerTracker.ViewModels
 {
     public class OpportunityViewModel
     {
+        [Key]
         [HiddenInput(DisplayValue = false)]
         public int Id { get; set; }
 
