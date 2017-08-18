@@ -37,5 +37,7 @@ namespace VolunteerTracker.Models
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Opportunity.Opportunity> Opportunities { get; set; }
+
+        public System.Data.Entity.DbSet<VolunteerTracker.ViewModels.VolunteerViewModel> VolunteerViewModels { get; set; }
     }
 }
