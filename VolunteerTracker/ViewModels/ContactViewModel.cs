@@ -18,10 +18,10 @@ namespace VolunteerTracker.ViewModels
         public string FullName { get; set; }
 
         [Display(Name = "Address")]
-        public Address Address { get; set; }
+        public AddressViewModel Address { get; set; }
 
         [Display(Name = "Phone")]
         [DataType(DataType.PhoneNumber)]
-        public int Phone { get; set; }
+        public string Phone { get; set; }
     }
 }

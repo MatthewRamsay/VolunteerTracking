@@ -41,23 +41,23 @@ namespace VolunteerTracker.ViewModels
 
         // AVAILABILITY
         [Display(Name = "Availability")]
-        public DaysAvailable DayAvailable { get; set; }
+        public DayAvailable DayAvailable { get; set; }
 
         // PREFERRED CENTER(S)
         [Display(Name = "Preferred Center")]
-        public Centers CenterPreferred { get; set; }
+        public Center CenterPreferred { get; set; }
 
         // EDUCATION
         [Display(Name = "Education")]
-        public EducationLevels EducationLevel { get; set; }
+        public EducationLevel EducationLevel { get; set; }
 
         // SKILLS
         [Display(Name = "Skill")]
-        public Skills Skill { get; set; }
+        public Skill Skill { get; set; }
 
         // LICENSES
         [Display(Name = "License")]
-        public Licenses CurrentLicense { get; set; }
+        public License CurrentLicense { get; set; }
 
         // ADDRESS
         [Display(Name = "Address")]
@@ -88,6 +88,6 @@ namespace VolunteerTracker.ViewModels
 
         // STATUS
         [Display(Name = "Status")]
-        public Statuses Status { get; set; }
+        public Status Status { get; set; }
     }
 }

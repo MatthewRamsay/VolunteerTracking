@@ -14,10 +14,10 @@ namespace VolunteerTracker.Models.Opportunity
 
         public string Name { get; set; }
         public DateTime Date { get; set; }
-        public Centers Location { get; set; }
+        public Locations Location { get; set; }
     }
 
-    public enum Centers
+    public enum Locations
     {
         FSCJ = 1,
         FSU,

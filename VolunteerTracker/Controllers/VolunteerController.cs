@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using VolunteerTracker.Models;
+using VolunteerTracker.Models.Volunteer;
+using VolunteerTracker.ViewModels;
 
 namespace VolunteerTracker.Controllers
 {
@@ -75,9 +77,37 @@ namespace VolunteerTracker.Controllers
         }
 
         // Add volunteer 
-        public ActionResult AddVolunteer()
+        public ActionResult AddVolunteer(VolunteerViewModel volunteer)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                var newVolunteer = new Volunteer
+                {
+                    Id = volunteer.Id,
+                    FirstName = volunteer.FirstName,
+                    LastName = volunteer.LastName,
+                    UserName = volunteer.UserName,
+                    Password = volunteer.Password,
+                    DayAvailable = volunteer.DayAvailable,
+                    CenterPreferred = volunteer.CenterPreferred,
+                    EducationLevel = volunteer.EducationLevel,
+                    Skill = volunteer.Skill,
+                    CurrentLicense = volunteer.CurrentLicense,
+                    Address = volunteer.Address,
+                    Phone = volunteer.Phone,
+                    Email = volunteer.Email,
+                    EmergencyContact = volunteer.EmergencyContact,
+                    HasDriversLicense = volunteer.HasDriversLicense,
+                    HasSsCard = volunteer.HasSsCard,
+                    Status = volunteer.Status
+
+                };
+                db.Volunteers.Add(newVolunteer);
+                db.SaveChanges();
+                return RedirectToAction("ListVolunteers");
+            }
+
+            return View(volunteer);
         }
 
         // Edit volunteer 
@@ -88,6 +118,12 @@ namespace VolunteerTracker.Controllers
 
         // Delete volunteer
         public ActionResult DeleteVolunteer()
+        {
+            return View();
+        }
+
+        // View volunteer details
+        public ActionResult ViewVolunteer()
         {
             return View();
         }

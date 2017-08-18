@@ -19,21 +19,21 @@ namespace VolunteerTracker.Models.Volunteer
         public string LastName { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
-        public DaysAvailable DayAvailable { get; set; }
-        public Centers CenterPreferred { get; set; }
-        public EducationLevels EducationLevels { get; set; }
-        public Skills Skill { get; set; }
-        public Licenses CurrentLicense { get; set; }
+        public DayAvailable DayAvailable { get; set; }
+        public Center CenterPreferred { get; set; }
+        public EducationLevel EducationLevel { get; set; }
+        public Skill Skill { get; set; }
+        public License CurrentLicense { get; set; }
         public AddressViewModel Address { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
         public ContactViewModel EmergencyContact { get; set; }
         public bool HasDriversLicense { get; set; }
         public bool HasSsCard { get; set; }
-        public Statuses Status { get; set; }
+        public Status Status { get; set; }
     }
 
-    public enum DaysAvailable
+    public enum DayAvailable
     {
         Monday=1,
         Tuesday,
@@ -44,7 +44,7 @@ namespace VolunteerTracker.Models.Volunteer
         Sunday
     }
 
-    public enum Centers
+    public enum Center
     {
         [Display(Name = "Florida State College at Jacksonville")] FSCJ=1,
         [Display(Name = "Florida State University")] FSU,
@@ -55,7 +55,7 @@ namespace VolunteerTracker.Models.Volunteer
         [Display(Name = "University of Florida")] UF
     }
 
-    public enum EducationLevels
+    public enum EducationLevel
     {
         [Display(Name = "High school")] Highschool=1,
         [Display(Name = "Some college")] College,
@@ -65,13 +65,13 @@ namespace VolunteerTracker.Models.Volunteer
         [Display(Name = "Doctorate or professional degree")] Doctorate
     }
 
-    public enum Skills
+    public enum Skill
     {
         Teaching=1,
         Swimming
     }
 
-    public enum Licenses
+    public enum License
     {
         License1=1,
         License2,
@@ -80,7 +80,7 @@ namespace VolunteerTracker.Models.Volunteer
         License5
     }
 
-    public enum Statuses
+    public enum Status
     {
         Approved=1,
         Pending,
