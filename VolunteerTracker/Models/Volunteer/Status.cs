@@ -7,9 +7,9 @@ namespace VolunteerTracker.Models.Volunteer
 {
     public class Status
     {
-        public bool Approved { get; set; }
-        public bool Pending { get; set; }
-        public bool Disapproved { get; set; }
-        public bool Inactive { get; set; }
+        public string Approved { get; set; }
+        public string Pending { get; set; }
+        public string Disapproved { get; set; }
+        public string Inactive { get; set; }
     }
 }
