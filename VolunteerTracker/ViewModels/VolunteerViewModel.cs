@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using VolunteerTracker.Models.Volunteer;
 
 namespace VolunteerTracker.ViewModels
 {
     public class VolunteerViewModel
     {
+        [HiddenInput(DisplayValue = false)]
+        public int Id { get; set; }
+
         // FIRST NAME
         [Required]
         [Display(Name = "First Name")]
@@ -55,11 +60,11 @@ namespace VolunteerTracker.ViewModels
 
         // ADDRESS
         [Display(Name = "Address")]
-        public Address Address { get; set; }
+        public AddressViewModel Address { get; set; }
 
         // PHONE
         [Display(Name = "Phone")]
-        public IList<ContactNumber> ContactNumbers { get; set; }
+        public IList<ContactNumberViewModel> ContactNumbers { get; set; }
 
         // EMAIL
         [Display(Name = "Email")]
@@ -69,7 +74,7 @@ namespace VolunteerTracker.ViewModels
 
         // EMERGENCY CONTACT
         [Display(Name = "Emergency Contact(s)")]
-        public IList<Contact> EmergencyContacts { get; set; }
+        public IList<ContactViewModel> EmergencyContacts { get; set; }
 
         // DRIVER'S LICENSE
         [Display(Name = "Driver's License")]

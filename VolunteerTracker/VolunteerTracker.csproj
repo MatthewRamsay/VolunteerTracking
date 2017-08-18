@@ -203,6 +203,10 @@
     <Compile Include="Models\Volunteer\Volunteer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\AddressViewModel.cs" />
+    <Compile Include="ViewModels\ContactNumberViewModel.cs" />
+    <Compile Include="ViewModels\ContactViewModel.cs" />
+    <Compile Include="ViewModels\OpportunityViewModel.cs" />
     <Compile Include="ViewModels\VolunteerViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

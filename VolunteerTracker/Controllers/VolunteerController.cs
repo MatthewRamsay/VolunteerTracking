@@ -6,8 +6,6 @@ using System.Web.Mvc;
 
 namespace VolunteerTracker.Controllers
 {
-
-
     /// <summary>
     /// When admin clicks "manage volunteers" link, a list of all volunteers will be displayed by default. 
     /// 
@@ -73,20 +71,17 @@ namespace VolunteerTracker.Controllers
             return View();
         }
 
-
-        // edit volunteer 
-        public ActionResult EditVolunteer()
-        {
-            return View();
-        }
-
-
         // add volunteer 
         public ActionResult AddVolunteer()
         {
             return View();
         }
 
+        // edit volunteer 
+        public ActionResult EditVolunteer()
+        {
+            return View();
+        }
 
         // delete volunteer ***optional
     }
