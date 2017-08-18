@@ -9,30 +9,77 @@ namespace VolunteerTracker.ViewModels
 {
     public class VolunteerViewModel
     {
+        // FIRST NAME
+        [Required]
         [Display(Name = "First Name")]
         [StringLength(35)]
         public string FirstName { get; set; }
 
+        // LAST NAME
+        [Required]
         [Display(Name = "Last Name")]
         [StringLength(35)]
         public string LastName { get; set; }
 
-        [Display(Name = "Preferred Center(s)")]
-        public IList<Center> CentersPreferred { get; set; }
+        // USERNAME
+        [Required]
+        [Display(Name = "Username")]
+        public string UserName { get; set; }
 
+        // PASSWORD
+        [Required]
+        [Display(Name = "Password")]
+        [DataType(DataType.Password)]
+        [MinLength(6)]
+        public string Password { get; set; }
+
+        // AVAILABILITY
         [Display(Name = "Availability")]
         public IList<DayAvailable> DaysAvailable { get; set; }
 
+        // PREFERRED CENTER(S)
+        [Display(Name = "Preferred Center(s)")]
+        public IList<Center> CentersPreferred { get; set; }
+
+        // EDUCATION
         [Display(Name = "Education")]
         public string HighestEducation { get; set; }
 
+        // SKILLS
         [Display(Name = "Skills")]
         public IList<Skill> Skills { get; set; }
 
+        // LICENSES
         [Display(Name = "Licenses")]
         public IList<CurrentLicense> Licenses { get; set; }
 
-        // Status of volunteer (Approved, Pending, Disapproved, Inactive)
+        // ADDRESS
+        [Display(Name = "Address")]
+        public Address Address { get; set; }
+
+        // PHONE
+        [Display(Name = "Phone")]
+        public IList<ContactNumber> ContactNumbers { get; set; }
+
+        // EMAIL
+        [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress)]
+        [StringLength(255)]
+        public string Email { get; set; }
+
+        // EMERGENCY CONTACT
+        [Display(Name = "Emergency Contact(s)")]
+        public IList<Contact> EmergencyContacts { get; set; }
+
+        // DRIVER'S LICENSE
+        [Display(Name = "Driver's License")]
+        public bool HasDriversLicense { get; set; }
+
+        // SOCIAL SECURITY CARD
+        [Display(Name = "Social Security Card")]
+        public bool HasSsCard { get; set; }
+
+        // STATUS: Approved, Pending, Disapproved, Inactive
         [Display(Name = "Status")]
         public IList<Status> Statuses { get; set; }
     }
