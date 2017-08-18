@@ -34,16 +34,8 @@ namespace VolunteerTracker.Models
         }
 
         public DbSet<Volunteer.Volunteer> Volunteers { get; set; }
-        public DbSet<DayAvailable> DaysAvailable { get; set; }
-        public DbSet<Skill> Skills { get; set; }
-        public DbSet<CurrentLicense> CurrentLicenses { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Contact> Contacts { get; set; }
-        public DbSet<ContactNumber> ContactNumbers { get; set; }
-        public DbSet<Status> Statuses { get; set; }
-        public DbSet<Center> Centers { get; set; }
         public DbSet<Opportunity.Opportunity> Opportunities { get; set; }
-
-        public System.Data.Entity.DbSet<VolunteerTracker.ViewModels.VolunteerViewModel> VolunteerViewModels { get; set; }
     }
 }

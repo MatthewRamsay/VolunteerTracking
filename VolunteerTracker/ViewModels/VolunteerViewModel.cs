@@ -41,23 +41,23 @@ namespace VolunteerTracker.ViewModels
 
         // AVAILABILITY
         [Display(Name = "Availability")]
-        public IList<DayAvailable> DaysAvailable { get; set; }
+        public DaysAvailable DayAvailable { get; set; }
 
         // PREFERRED CENTER(S)
-        [Display(Name = "Preferred Center(s)")]
-        public IList<Center> CentersPreferred { get; set; }
+        [Display(Name = "Preferred Center")]
+        public Centers CenterPreferred { get; set; }
 
         // EDUCATION
         [Display(Name = "Education")]
-        public string HighestEducation { get; set; }
+        public EducationLevels EducationLevel { get; set; }
 
         // SKILLS
-        [Display(Name = "Skills")]
-        public IList<Skill> Skills { get; set; }
+        [Display(Name = "Skill")]
+        public Skills Skill { get; set; }
 
         // LICENSES
-        [Display(Name = "Licenses")]
-        public IList<CurrentLicense> Licenses { get; set; }
+        [Display(Name = "License")]
+        public Licenses CurrentLicense { get; set; }
 
         // ADDRESS
         [Display(Name = "Address")]
@@ -65,7 +65,8 @@ namespace VolunteerTracker.ViewModels
 
         // PHONE
         [Display(Name = "Phone")]
-        public IList<ContactNumberViewModel> ContactNumbers { get; set; }
+        [DataType(DataType.PhoneNumber)]
+        public string Phone { get; set; }
 
         // EMAIL
         [Display(Name = "Email")]
@@ -74,8 +75,8 @@ namespace VolunteerTracker.ViewModels
         public string Email { get; set; }
 
         // EMERGENCY CONTACT
-        [Display(Name = "Emergency Contact(s)")]
-        public IList<ContactViewModel> EmergencyContacts { get; set; }
+        [Display(Name = "Emergency Contact")]
+        public ContactViewModel EmergencyContact { get; set; }
 
         // DRIVER'S LICENSE
         [Display(Name = "Driver's License")]
@@ -85,8 +86,8 @@ namespace VolunteerTracker.ViewModels
         [Display(Name = "Social Security Card")]
         public bool HasSsCard { get; set; }
 
-        // STATUS: Approved, Pending, Disapproved, Inactive
+        // STATUS
         [Display(Name = "Status")]
-        public IList<Status> Statuses { get; set; }
+        public Statuses Status { get; set; }
     }
 }

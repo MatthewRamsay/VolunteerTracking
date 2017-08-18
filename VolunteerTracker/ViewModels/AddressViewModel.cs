@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VolunteerTracker.Models.Volunteer;
 
 namespace VolunteerTracker.ViewModels
 {
@@ -26,8 +27,7 @@ namespace VolunteerTracker.ViewModels
         // STATE
         [Required]
         [Display(Name = "State")]
-        [MaxLength(2)]
-        public string State { get; set; }
+        public States State { get; set; }
 
         // ZIP CODE
         [Required]

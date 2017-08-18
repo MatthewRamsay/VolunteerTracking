@@ -192,24 +192,17 @@
     <Compile Include="Models\Account\IdentityModels.cs" />
     <Compile Include="Models\Account\ManageViewModels.cs" />
     <Compile Include="Models\Opportunity\Opportunity.cs" />
-    <Compile Include="Models\Volunteer\ContactNumber.cs" />
-    <Compile Include="Models\Volunteer\CurrentLicense.cs" />
-    <Compile Include="Models\Volunteer\DayAvailable.cs" />
     <Compile Include="Models\Volunteer\Contact.cs" />
-    <Compile Include="Models\Volunteer\Status.cs" />
     <Compile Include="Models\Volunteer\Address.cs" />
-    <Compile Include="Models\Volunteer\Center.cs" />
-    <Compile Include="Models\Volunteer\Skill.cs" />
     <Compile Include="Models\Volunteer\Volunteer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\AddressViewModel.cs" />
-    <Compile Include="ViewModels\ContactNumberViewModel.cs" />
     <Compile Include="ViewModels\ContactViewModel.cs" />
-    <Compile Include="ViewModels\OpportunityViewModel.cs" />
     <Compile Include="ViewModels\VolunteerViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-flatly.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -274,9 +267,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Volunteer\AddVolunteer.cshtml" />
-    <Content Include="Views\Volunteer\EditVolunteer.cshtml" />
-    <Content Include="Views\Volunteer\DeleteVolunteer.cshtml" />
-    <Content Include="Views\Volunteer\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

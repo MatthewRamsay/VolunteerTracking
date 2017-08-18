@@ -14,17 +14,14 @@ namespace VolunteerTracker.ViewModels
         [HiddenInput(DisplayValue = false)]
         public int Id { get; set; }
 
-        // NAME
-        [Required]
         [Display(Name = "Name")]
         public string FullName { get; set; }
 
-        // ADDRESS
         [Display(Name = "Address")]
         public Address Address { get; set; }
 
-        // PHONE
         [Display(Name = "Phone")]
-        public IList<ContactNumber> ContactNumbers { get; set; }
+        [DataType(DataType.PhoneNumber)]
+        public int Phone { get; set; }
     }
 }
