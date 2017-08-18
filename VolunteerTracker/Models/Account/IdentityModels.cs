@@ -1,8 +1,11 @@
-﻿using System.Data.Entity;
+﻿using System.ComponentModel;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using VolunteerTracker.Models.Volunteer;
+using VolunteerTracker.Models.Opportunity;
 
 namespace VolunteerTracker.Models
 {
@@ -30,8 +33,15 @@ namespace VolunteerTracker.Models
             return new ApplicationDbContext();
         }
 
-        // put additional models 
-
-
+        public DbSet<Volunteer.Volunteer> Volunteers { get; set; }
+        public DbSet<DayAvailable> DaysAvailable { get; set; }
+        public DbSet<Skill> Skills { get; set; }
+        public DbSet<CurrentLicense> CurrentLicenses { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<ContactNumber> ContactNumbers { get; set; }
+        public DbSet<Status> Statuses { get; set; }
+        public DbSet<Center> Centers { get; set; }
+        public DbSet<Opportunity.Opportunity> Opportunities { get; set; }
     }
 }

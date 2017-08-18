@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace VolunteerTracker.ViewModels
 {
     public class AddressViewModel
     {
+        [HiddenInput(DisplayValue = false)]
+        public int Id { get; set; }
+
         // STREET
         [Required]
         [Display(Name = "Street")]

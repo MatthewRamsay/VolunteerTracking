@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using VolunteerTracker.Models.Volunteer;
 
 namespace VolunteerTracker.ViewModels
 {
     public class OpportunityViewModel
     {
+        [HiddenInput(DisplayValue = false)]
+        public int Id { get; set; }
+
         // NAME
         [Required]
         [Display(Name = "Opportunity")]
