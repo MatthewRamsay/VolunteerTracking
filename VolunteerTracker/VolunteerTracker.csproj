@@ -274,6 +274,9 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Volunteer\AddVolunteer.cshtml" />
+    <Content Include="Views\Volunteer\EditVolunteer.cshtml" />
+    <Content Include="Views\Volunteer\DeleteVolunteer.cshtml" />
+    <Content Include="Views\Volunteer\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

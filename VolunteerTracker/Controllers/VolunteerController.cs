@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VolunteerTracker.Models;
 
 namespace VolunteerTracker.Controllers
 {
@@ -22,9 +23,11 @@ namespace VolunteerTracker.Controllers
     /// 
     /// The "add volunteer" (button/link) will be at the top in the same area as the filters. 
     /// </summary>
-    
-    public class VolunteerController : Controller 
+
+    public class VolunteerController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
         // GET: Volunteer
         public ActionResult Index()
         {
@@ -71,18 +74,22 @@ namespace VolunteerTracker.Controllers
             return View();
         }
 
-        // add volunteer 
+        // Add volunteer 
         public ActionResult AddVolunteer()
         {
             return View();
         }
 
-        // edit volunteer 
+        // Edit volunteer 
         public ActionResult EditVolunteer()
         {
             return View();
         }
 
-        // delete volunteer ***optional
+        // Delete volunteer
+        public ActionResult DeleteVolunteer()
+        {
+            return View();
+        }
     }
 }

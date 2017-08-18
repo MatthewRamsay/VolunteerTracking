@@ -43,5 +43,7 @@ namespace VolunteerTracker.Models
         public DbSet<Status> Statuses { get; set; }
         public DbSet<Center> Centers { get; set; }
         public DbSet<Opportunity.Opportunity> Opportunities { get; set; }
+
+        public System.Data.Entity.DbSet<VolunteerTracker.ViewModels.VolunteerViewModel> VolunteerViewModels { get; set; }
     }
 }
