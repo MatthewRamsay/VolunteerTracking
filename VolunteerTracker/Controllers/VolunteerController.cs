@@ -76,7 +76,15 @@ namespace VolunteerTracker.Controllers
             return View();
         }
 
-        // Add volunteer 
+
+        // Add volunteer
+        [HttpGet]
+        public ActionResult AddVolunteer()
+        {
+            return View();
+        }
+
+        [HttpPost]
         public ActionResult AddVolunteer(VolunteerViewModel volunteer)
         {
             if (ModelState.IsValid)
