@@ -191,22 +191,29 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\OpportunityController.cs" />
+    <Compile Include="Controllers\OpportunitiesController.cs" />
     <Compile Include="Controllers\VolunteerController.cs" />
+    <Compile Include="Controllers\VolunteersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708171805074_InitialCreate.cs" />
+    <Compile Include="Migrations\201708171805074_InitialCreate.Designer.cs">
+      <DependentUpon>201708171805074_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708181518371_initial.cs" />
+    <Compile Include="Migrations\201708181518371_initial.Designer.cs">
+      <DependentUpon>201708181518371_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708181759085_Added date to opportunities.cs" />
+    <Compile Include="Migrations\201708181759085_Added date to opportunities.Designer.cs">
+      <DependentUpon>201708181759085_Added date to opportunities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account\AccountViewModels.cs" />
     <Compile Include="Models\Account\IdentityModels.cs" />
     <Compile Include="Models\Account\ManageViewModels.cs" />
-    <Compile Include="Models\Volunteer\ContactNumber.cs" />
-    <Compile Include="Models\Volunteer\CurrentLicense.cs" />
-    <Compile Include="Models\Volunteer\DayAvailable.cs" />
-    <Compile Include="Models\Volunteer\EmergencyContact.cs" />
-    <Compile Include="Models\Volunteer\Status.cs" />
-    <Compile Include="Models\Volunteer\VolunteerAddress.cs" />
-    <Compile Include="Models\Volunteer\Center.cs" />
-    <Compile Include="Models\Volunteer\Skill.cs" />
+    <Compile Include="Models\Opportunity\Opportunity.cs" />
     <Compile Include="Models\Volunteer\Volunteer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -245,8 +252,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -268,11 +273,20 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Volunteers\Create.cshtml" />
+    <Content Include="Views\Volunteers\Delete.cshtml" />
+    <Content Include="Views\Volunteers\Details.cshtml" />
+    <Content Include="Views\Volunteers\Edit.cshtml" />
+    <Content Include="Views\Volunteers\Index.cshtml" />
+    <Content Include="Views\Volunteers\ViewOpportunities.cshtml" />
+    <Content Include="Views\Opportunities\Create.cshtml" />
+    <Content Include="Views\Opportunities\Delete.cshtml" />
+    <Content Include="Views\Opportunities\Details.cshtml" />
+    <Content Include="Views\Opportunities\Edit.cshtml" />
+    <Content Include="Views\Opportunities\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\Opportunity\" />
-    <Folder Include="Views\Opportunity\" />
     <Folder Include="Views\Volunteer\" />
   </ItemGroup>
   <ItemGroup>
@@ -290,6 +304,17 @@
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708171805074_InitialCreate.resx">
+      <DependentUpon>201708171805074_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708181518371_initial.resx">
+      <DependentUpon>201708181518371_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708181759085_Added date to opportunities.resx">
+      <DependentUpon>201708181759085_Added date to opportunities.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -304,7 +329,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49688</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
